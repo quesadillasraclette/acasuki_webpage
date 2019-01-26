@@ -463,25 +463,29 @@
     <body>
 
     <!-- To verify is AMP analytics is in Body or head -->
-            <amp-analytics type="googleanalytics">
-                    <script type="application/json">
-            {
-                                "vars": {
-                                    "account": "UA-######"
-                                },
-                                "triggers": {
-                                    "default pageview": {
-                                        "on": "visible",
-                                        "request": "pageview",
-                                        "vars": {
-                                            "title": "{{title}}"
-                                        }
-                                    }
-                                }
-                            }
-            
-                    </script>
-            </amp-analytics>
+
+            <amp-analytics type="gtag" data-credentials="include">
+                <script type="application/json">
+                  {
+                    "vars": {
+                      "gtag_id": "<UA-122164195>",
+                      "config": {
+                       "<UA-122164195>": { "groups": "default" }
+                      }
+                    },
+                    "triggers": {
+                      "button": {
+                        "selector": "#the-button",
+                        "on": "click",
+                        "vars": {
+                          "event_name": "login",
+                          "method": "Google"
+                        }
+                      }
+                    }
+                  }
+                </script>
+              </amp-analytics>
 
     
 

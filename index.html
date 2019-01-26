@@ -15,7 +15,6 @@
       <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
       <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
       <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
-      <script async custom-element="amp-date-picker" src="https://cdn.ampproject.org/v0/amp-date-picker-0.1.js"></script>
       <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
       <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
       <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
@@ -465,28 +464,21 @@
     <!-- To verify is AMP analytics is in Body or head -->
 
             <amp-analytics type="gtag" data-credentials="include">
-                <script type="application/json">
+                  <script type="application/json">
                   {
-                    "vars": {
+                    "vars" : {
                       "gtag_id": "<UA-122164195>",
-                      "config": {
-                       "<UA-122164195>": { "groups": "default" }
-                      }
-                    },
-                    "triggers": {
-                      "button": {
-                        "selector": "#the-button",
-                        "on": "click",
-                        "vars": {
-                          "event_name": "login",
-                          "method": "Google"
+                      "config" : {
+                        "<GUA-122164195>": {
+                          "groups": "default",
+                          "page_title": "Beethoven symphonies",
+                          "page_location": "https://www.example.com/beethoven.html"
                         }
                       }
                     }
                   }
-                </script>
-              </amp-analytics>
-
+                  </script>
+                  </amp-analytics>
     
 
             <!-- SideBar to open / Should include hamburger in CSS -->
@@ -528,35 +520,6 @@
                                                                  max-font-size="36">
                                                        
              <div class="btn_book"> Book your session </div>
-             <!-- <div id="date_picker"> 
-                <amp-date-picker id="simple-date-picker-2"
-                        type="single"
-                        mode="overlay"
-                        layout="container"
-                        on="select:AMP.setState({date2: event.date, dateType2: event.id})"
-                        locale="en"
-                        format="YYYY-MM-DD"
-                        open-after-select
-                        input-selector="[name=date2]"
-                        class="example-picker space-between">
-                        <input class="border-none p0"
-                            name="date2"
-                            placeholder="Pick a date">
-                        <button on="tap: simple-date-picker-2.clear">Clear</button>
-                        <template type="amp-mustache"
-                            date-template
-                            dates="FREQ=WEEKLY;DTSTART=20180101T000000Z;INTERVAL=2;WKST=SU;BYDAY=TU"
-                            id="tacos2">
-                            <span>🌮</span>
-                            <span class="taco-tuesday"></span>
-                        </template>
-                        <template type="amp-mustache"
-                            info-template>
-                            <span [text]="date2 ? 'You picked ' + date2 + '.' +
-                            (dateType2 == 'tacos2' ? ' Happy Taco Tuesday!' : '') : ''">You will see your chosen date here.</span>
-                        </template>
-                        </amp-date-picker>
--->
                         <form>
                             <label></label>
                             <input type="date" id="datePicker">

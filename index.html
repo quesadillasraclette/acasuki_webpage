@@ -1,0 +1,708 @@
+<!doctype html>
+  <html ⚡>
+    <head>
+      <meta charset="utf-8">
+      <title>Product Browse Page</title>
+
+      <!-- Script for AMP Component -->
+      <script async src="https://cdn.ampproject.org/v0.js"></script>
+      
+      <script async custom-element="amp-carousel" src="https://cdn.ampproject.org/v0/amp-carousel-0.1.js"></script>
+      <script async custom-element="amp-list" src="https://cdn.ampproject.org/v0/amp-list-0.1.js"></script>
+      <script async custom-element="amp-analytics" src="https://cdn.ampproject.org/v0/amp-analytics-0.1.js"></script>
+      <script async custom-element="amp-sidebar" src="https://cdn.ampproject.org/v0/amp-sidebar-0.1.js"></script>
+      <script async custom-element="amp-bind" src="https://cdn.ampproject.org/v0/amp-bind-0.1.js"></script>
+      <script async custom-element="amp-selector" src="https://cdn.ampproject.org/v0/amp-selector-0.1.js"></script>
+      <script async custom-element="amp-instagram" src="https://cdn.ampproject.org/v0/amp-instagram-0.1.js"></script>
+      <script async custom-element="amp-fit-text" src="https://cdn.ampproject.org/v0/amp-fit-text-0.1.js"></script>
+      <script async custom-element="amp-date-picker" src="https://cdn.ampproject.org/v0/amp-date-picker-0.1.js"></script>
+      <script async custom-template="amp-mustache" src="https://cdn.ampproject.org/v0/amp-mustache-0.2.js"></script>
+      <script async custom-element="amp-lightbox" src="https://cdn.ampproject.org/v0/amp-lightbox-0.1.js"></script>
+      <script async custom-element="amp-form" src="https://cdn.ampproject.org/v0/amp-form-0.1.js"></script>
+      <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
+      
+      <!-- If browser does not accept AMP then redirect to # -->
+      <link rel="canonical" href="#">
+      <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
+      
+      <!-- Not 100% sure why i needed this style but it was mandatory to have the AMP verified  -->
+      <style amp-boilerplate>body{-webkit-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-moz-animation:-amp-start 8s steps(1,end) 0s 1 normal both;-ms-animation:-amp-start 8s steps(1,end) 0s 1 normal both;animation:-amp-start 8s steps(1,end) 0s 1 normal both}@-webkit-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-moz-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-ms-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@-o-keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}@keyframes -amp-start{from{visibility:hidden}to{visibility:visible}}</style><noscript><style amp-boilerplate>body{-webkit-animation:none;-moz-animation:none;-ms-animation:none;animation:none}</style></noscript>
+      <style amp-custom>
+        * { 
+          margin:0;
+          padding:0;
+          box-sizing: border-box;
+          font-family: Raleway;
+          font-size:16px;
+          
+        }
+
+          /*Color of the menu*/
+          
+          
+         :root {
+           --color-primary: #82B3ED;
+           --color-secondary: ##fff;
+           --color-text-light: #fff;
+           --color-text-dark: #000;
+           --color-bg-light: #FAFAFC;
+
+           --space-1: .5rem;   
+           --space-2: 1rem;    
+           --space-3: 1.5rem;  
+           --space-4: 2rem;    
+           --box-shadow-1: 0 1px 1px 0 rgba(0,0,0,.14), 0 1px 1px -1px rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12);
+         }
+
+          /*Carousel*/
+         amp-carousel {
+           margin:0
+         }
+
+         .header {
+           position:relative;
+           box-shadow: var(--box-shadow-1);
+           padding-top:52px;
+           background-color: var(--color-secondary);
+         }
+
+         .header #sample-menu {
+           position:fixed;
+           top:0;
+           left:0;
+           z-index:99;
+           font-size:18px;
+           font-weight:700;
+           color: var(--color-text-light);
+           text-transform:uppercase;
+           padding:13px;
+           position:fixed;
+         }
+
+         .header #sample-logo {
+           position:absolute;
+           top:0;
+           left:36px;
+           font-size:20px;
+           font-weight:400;
+           color:#414C45;
+           text-transform:uppercase;
+           margin:0 var(--space-2);
+           height:var(--space-4);
+           text-decoration:none;
+           line-height:52px
+         }
+
+         .header form {
+           padding:0
+         }
+
+         .header input::-webkit-search-decoration,.header input::-webkit-search-cancel-button {
+           display:none
+         }
+
+         .header input[type=submit] {
+           position:absolute;
+           top:10px;
+           right:var(--space-1);
+           background-color:var(--color-primary);
+           background-position:center;
+           background-repeat:no-repeat;
+           background-image:-webkit-image-set(url(/img/ic_search_white_1x_web_24dp.png) 1x,url(/img/ic_search_white_2x_web_24dp.png) 2x);
+           border:0;
+           height:var(--space-4);
+           width:36px;
+           -webkit-appearance:none;
+           border-radius:4px 0
+         }
+
+         .header input[type=search],.header input[type=text] {
+           position:absolute;
+           top:10px;
+           right:var(--space-3);
+           background:var(--color-bg-light);
+           padding:0 var(--space-1);
+           width:20vw;
+           height:var(--space-4);
+           font-family:inherit;
+           font-size:100%;
+           border:solid 0 var(--color-primary);
+           border-radius:4px 0;
+           transition:all .9s ease
+         }
+
+         .header input[type=search]:focus,.header input[type=text]:focus {
+           width:80vw;
+           max-width:700px;
+           background-color:var(--color-text-light);
+           border-color:var(--color-primary);
+           box-shadow:var(--box-shadow-1);
+           outline:none
+         }
+
+         .header input:-moz-placeholder,.header input::-webkit-input-placeholder {
+           color:var(--color-bg-light);
+         }
+
+         .header input:focus + #sample-logo {
+           visibility:hidden;
+           opacity:0;
+           transition:visibility 0 0.7s,opacity .7s ease
+         }
+
+         .header input + #sample-logo {
+           visibility:visible;
+           opacity:1;
+           transition:opacity 1.5s ease
+         }
+
+        /*Reponsive*/
+         @media (min-width: 600px) {
+           .header input[type=search] {
+             width:100px
+           }
+
+           .header input[type=search]:focus {
+             width:600px
+           }
+         }
+
+
+          @media (max-width: 900px) {
+
+              #google-map{
+                  display: none;
+              }
+
+
+          }
+
+         .items,amp-list.items > div {
+           display:flex;
+           justify-content:space-around;
+           flex-wrap:wrap
+         }
+
+         .item {
+           flex-grow:1;
+           flex-shrink:1
+         }
+
+    
+         #carousel-images .caption {
+           text-align: center;
+           position: absolute;
+           bottom: 0;
+           left: 0;
+           right: 0;
+           padding: var(--space-3);
+           background: rgba(200,200,200,.5);
+           color: var(--color-text-light);
+           font-size: 36px;
+           max-height: 30%;
+           font-weight: 300;
+         }
+
+         
+
+          .btn_book:hover{
+                background-color: #82B3ED;
+                color: white;
+                }
+
+          .btn_book{
+              font-size:24px;
+            }
+
+          #learn-to-wake{ 
+              position:absolute;
+
+          }
+            section { 
+              display:flex;
+
+            }
+
+            h1 {
+              font-size: 20px;
+              padding-top:10px;
+              padding-left:20px;
+            }
+
+            p {
+              font-size: 20px;
+              padding-top:10px;
+              padding-left: 20px;
+            }
+
+          /* contact us form */
+                    input[type=text], select, textarea {
+                    width: 50%;
+                    padding: 5px;
+                    border: 1px solid #ccc;
+                    border-radius: 4px;
+                    resize: vertical;
+
+                  }
+
+                  label {
+                    padding: 12px 12px 12px 0;
+                    display: inline-block;
+                  }
+
+
+                  input[type=submit] {
+                    background-color: #4CAF50;
+                    color: white;
+                    padding: 12px 20px;
+                    border: none;
+                    border-radius: 4px;
+                    cursor: pointer;
+                    float: right;
+                  }
+
+                  input[type=submit]:hover {
+                    background-color: #45a049;
+                  }
+
+                  .container {
+                    border-radius: 5px;
+                    background-color: #f2f2f2;
+                    padding: 20px;
+                  }
+
+                  .col-25 {
+                    float: left;
+                    width: 25%;
+                    margin-top: 6px;
+                  }
+
+                  .col-75 {
+                    float: left;
+                    width: 75%;
+                    margin-top: 26x;
+                  }
+
+                  /* Clear floats after the columns */
+                  .row:after {
+                    content: "";
+                    display: table;
+                    clear: both;
+                  }
+
+                  /* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+                  @media screen and (max-width: 600px) {
+                    .col-25, .col-75, input[type=submit] {
+                      width: 100%;
+                      margin-top: 0;
+                    }
+                  }
+
+                  #form_section {
+                    display:flex;
+                    background-color:#f2f2f2;
+                    justify-content: space-around;
+                    align-items: center;
+                    padding-bottom: 50px;
+                    padding-top: 50px;
+                    width: 100vw;
+                  }
+
+                   #contact_us_text{
+                    position:absolute, right;
+                    justify-content: center;
+                    font-family: Raleway;
+                    font-weight: 500;
+                    font-style: normal;
+                    font-size: 20px;
+                    letter-spacing: .4px;
+                    line-height: 1.6em;
+                    color: #000;
+
+                  }
+                   
+                  amp-date-picker{
+                        display: block;
+                        margin-left: auto;
+                        margin-right: auto 
+                        }
+                  
+
+                  #instagram{
+                    width:100%;
+                    display:flex;
+                    justify-content: space-around;
+                  }
+                  #instagram > amp-instagram{
+                    width:200px;
+                  }
+
+                  #simple-date-picker-2{
+                    display:flex;
+                    justify-content:center;
+                  }
+
+                  #google-map{
+                    width: 100%
+                  }
+
+                  #drawermenu{
+                    width: 300px;
+                    background-color:white;
+                  }
+                
+                  @media (max-width: 600px) {
+                    #drawermenu {
+                      width: 150px;
+                      background-color:white;
+                    }
+                  }
+
+                .slider-item{
+                  font-size:25px;
+                }
+
+                .slider-item:hover{
+                   color: #82B3ED;
+                }
+
+                #product_catalog{
+                  display: flex;                             
+                  width: 100%;
+                  height: 100%;
+                  position: absolute;                                   
+                }
+                .image_catalog{
+                  width: 30vw;
+                  margin: 10px;
+                  
+                }
+
+                @media (max-width: 600px) {  
+                  #product_catalog{
+                    display: block;  
+                    text-align: center;                                
+                  }     
+                  .image_catalog {
+                    width: 100vw;
+                  }      
+                }
+
+
+
+
+                #display_map{
+                  display:flex;
+                  width: 100vw;
+                  justify-content: space-around;
+                  padding: 10px
+                }
+/*text ...
+                 #precio{
+                  background-image: url("images/gift.gif");
+                  background-repeat: no-repeat, repeat;
+                  text-align: center;
+                  background-size: 2000px 1000px;
+                }
+            */
+
+            
+                
+                .intro_text:hover {
+                  color:#82B3ED;
+                }
+                
+                #Package_to_buy{
+                  margin-left: 500px;
+                  margin-bottom: 20px;
+                  justify-content: center;
+                  font-size: 3vw;
+
+                }
+
+                @media (max-width: 512px) {
+                .intro_text{
+                  font-size:12px;
+                }
+                .p_text {
+                  font-size: 10px;
+                
+                }
+                #p-contact{
+                  font-size:14px;
+                  
+                
+                }
+               }
+
+               @media (max-width: 768px) {
+                #Package_to_buy{
+                  margin-left: 325px;
+                  margin-bottom: 20px;
+                }
+               }
+
+               @media (max-width: 512px) {
+                #Package_to_buy{
+                  margin-left: 220px;
+                  margin-bottom: 20px;
+                }
+               }
+
+               @media (max-width: 414px) {
+                #Package_to_buy{
+                  margin-left: 150px;
+                  margin-bottom: 20px;
+                }
+               }
+
+        </style>
+      
+    </head>
+
+    <body>
+
+    <!-- To verify is AMP analytics is in Body or head -->
+            <amp-analytics type="googleanalytics">
+                    <script type="application/json">
+            {
+                                "vars": {
+                                    "account": "UA-######"
+                                },
+                                "triggers": {
+                                    "default pageview": {
+                                        "on": "visible",
+                                        "request": "pageview",
+                                        "vars": {
+                                            "title": "{{title}}"
+                                        }
+                                    }
+                                }
+                            }
+            
+                    </script>
+            </amp-analytics>
+
+    
+
+            <!-- SideBar to open / Should include hamburger in CSS -->
+            <amp-sidebar id="drawermenu" layout="nodisplay">
+                  <span class="slider-item">Booking</a> </span>
+                  <hr/>
+                  <span class="slider-item"> The Park</a></span>
+                  <hr/>
+                  <span class="slider-item">Contact</a></span>
+            </amp-sidebar>
+            
+            <!--Menu with Search Bar  -->
+            <div class="header">
+                <span>
+                    <a id="sample-menu" on="tap:drawermenu.toggle">
+                      <amp-img srcset="images/icono-hamburguesa.png" width="24" height="24" alt="navigation"></amp-img>
+                    </a>
+                    <input name="search" type="text" placeholder="Search">
+                </span>
+                <span>
+                    <a id="sample-logo" href="">Acuaski</a>
+                    <input type="submit" value="">
+                   
+               
+              </span>
+      
+            </div>
+
+    <main>
+      <!-- Carousel, note: need to add other images -->
+      <amp-carousel id="carousel-images" width="1024" height="480" layout="responsive" type="slides" autoplay>
+        <a href="#">
+          <amp-img src="images/wake_2.jpeg" layout="fill" alt="redbull" attribution="visualhunt"></amp-img>
+    <!-- Text without the button work but i am not sure what is happening with the button -->
+          
+
+          
+          <amp-fit-text class="caption" width="2000" height="50" layout="responsive"
+                                                                 max-font-size="36">
+                                                       
+             <div class="btn_book"> Book your session </div>
+             <!-- <div id="date_picker"> 
+                <amp-date-picker id="simple-date-picker-2"
+                        type="single"
+                        mode="overlay"
+                        layout="container"
+                        on="select:AMP.setState({date2: event.date, dateType2: event.id})"
+                        locale="en"
+                        format="YYYY-MM-DD"
+                        open-after-select
+                        input-selector="[name=date2]"
+                        class="example-picker space-between">
+                        <input class="border-none p0"
+                            name="date2"
+                            placeholder="Pick a date">
+                        <button on="tap: simple-date-picker-2.clear">Clear</button>
+                        <template type="amp-mustache"
+                            date-template
+                            dates="FREQ=WEEKLY;DTSTART=20180101T000000Z;INTERVAL=2;WKST=SU;BYDAY=TU"
+                            id="tacos2">
+                            <span>🌮</span>
+                            <span class="taco-tuesday"></span>
+                        </template>
+                        <template type="amp-mustache"
+                            info-template>
+                            <span [text]="date2 ? 'You picked ' + date2 + '.' +
+                            (dateType2 == 'tacos2' ? ' Happy Taco Tuesday!' : '') : ''">You will see your chosen date here.</span>
+                        </template>
+                        </amp-date-picker>
+-->
+                        <form>
+                            <label></label>
+                            <input type="date" id="datePicker">
+                            
+                          </form>
+                    </div>
+             
+          </amp-fit-text>
+
+          
+        </a>
+        <a href="#">
+          <amp-img src="images/wakeboard_first.jpg" layout="fill" alt="redbull" attribution="visualhunt"></amp-img>
+          <amp-fit-text class="caption" width="2000" height="50" layout="responsive"
+                                                                 max-font-size="24">
+            <div class="btn_book"> Visit the park </div>
+
+          </amp-fit-text>
+        </a>
+        <a href="#">
+            <amp-img src="images/experience.png" layout="fill" alt="redbull" attribution="visualhunt"></amp-img>
+            <amp-fit-text class="caption" width="2000" height="50" layout="responsive"
+                                                                   max-font-size="24">
+              <div class="btn_book"> Live the experience today! </div>
+  
+            </amp-fit-text>
+          </a>
+      </amp-carousel>
+      
+
+
+<!-- Contact us  -->
+            
+              <section id="form_section">
+                 <div id="display_map">
+                  <div id="google-map">
+                    <!-- <div class="mapouter"><div class="gmap_canvas"><iframe width="600" height="500" id="gmap_canvas" src="https://maps.google.com/maps?q=acuaski%20mexico&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://www.crocothemes.net">crocothemes.net</a></div><style>.mapouter{text-align:right;height:500px;width:600px;}.gmap_canvas {overflow:hidden;background:none!important;height:500px;width:600px;}</style></div>-->
+                    <div> 
+                      <h1> Direction  </h1>
+                        <amp-iframe width="700" height="500"
+                                sandbox="allow-scripts allow-same-origin"
+                                layout="responsive"
+                                frameborder="0"
+                                src="https://maps.google.com/maps?q=acuaski%20mexico&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no">
+                        </amp-iframe>
+                    </div>
+                  </div>
+
+                  <div id="contact_us_text">
+                    <h1> Contact us  </h1>
+                    <p id="p-contact"> Start your Wakeboarding adventure today.          
+                      If you are new to wakeboarding you should not have to worry.
+                      Our dedicated team is here to help you
+                      and make sure you feel safe, have fun, and  the experience             
+                    </p>
+                    <form class="sample-form" method="post"
+                          action-xhr="/components/amp-form/submit-form-input-text-xhr"
+                          target="_top">
+                      <div class="container">
+                        <form action="/action_page.php" target="_top"></form>
+                          <div class="row">
+                            <div class="col-25">
+                              <label for="fname">First Name</label>
+                            </div>
+                                        <div class="col-75">
+                                          <input type="text" id="fname" name="firstname" placeholder="Your name..">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-25">
+                                          <label for="lname">Last Name</label>
+                                        </div>
+                                        <div class="col-75">
+                                          <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-25">
+                                          <label for="city">City</label>
+                                        </div>
+                                        <div class="col-75">
+                                          <select id="city" name="city">
+                                            <option value="Mexico City">Mexico City</option>
+                                            <option value="Morelos">Morelos</option>
+                                            <option value="Puebla">Puebla</option>
+                                          </select>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <div class="col-25">
+                                          <label for="subject">Subject</label>
+                                        </div>
+                                        <div class="col-75">
+                                          <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                                        </div>
+                                      </div>
+                                      <div class="row">
+                                        <input type="submit" value="Submit">
+                                      </div>
+                                      </form>
+                          </div>
+                    </div>
+              </section>
+            </main>
+
+            <h1 id="Package_to_buy"> Packages </h1>
+
+            <div id="product_catalog">
+                <div id="precio">
+                   <div>
+                  
+                   <amp-img class="image_catalog" alt="A view of the sea"
+                   src="images/gift.gif"
+                   width="3"
+                   height="2"
+                   layout="responsive">
+                  </amp-img>
+                  </div>
+                   <h1 class="intro_text"> Intro to wakeboarding experience gift voucher for one person </h1> 
+                   <p class="p_text "> 650 MNX - equipment included.</p>
+               </div>
+                <div>
+                  
+                      <div>
+                      <amp-img class="image_catalog" alt="A view of the sea"
+                      src="images/supyoga.jpg"
+                      width="3"
+                      height="2"
+                      layout="responsive">
+                     </amp-img>
+                     </div>
+                   <h1 class="intro_text"> Paddleboard Yogalates (1 Hour) </h1>
+                   <p class="p_text "> Take to the water on a paddleboard for a 1 hour floating fusion yoga/pilates class with Ruth Tongue. Classes vary every week and can be tailored to suit for all levels.</p>
+               </div>
+               <div class="intro_text">
+                  <div>
+                  
+                      <amp-img class="image_catalog" alt="A view of the sea"
+                      src="images/motocross.jpg"
+                      width="3"
+                      height="2"
+                      layout="responsive">
+                     </amp-img>
+                     </div>
+                     <h1 class="intro_text"> Motrocross  </h1>
+                     <p class="p_text "> If you still want to have more adventure...</p>
+               </div>
+               
+           </div>
+           
+
+    </body>
+  </html>

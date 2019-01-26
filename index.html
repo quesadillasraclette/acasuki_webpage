@@ -21,24 +21,7 @@
       <script async custom-element="amp-iframe" src="https://cdn.ampproject.org/v0/amp-iframe-0.1.js"></script>
       
 
-      <!-- To verify is AMP analytics is in Body or head -->
-
-      <amp-analytics type="gtag" data-credentials="include">
-          <script type="application/json">
-          {
-            "vars" : {
-              "gtag_id": "UA-122164195",
-              "config" : {
-                "GUA-122164195": {
-                  "groups": "default",
-                  "page_title": "Acuaski",
-                  "page_location": "https://quesadillasraclette.github.io/acasuki_webpage/"
-                }
-              }
-            }
-          }
-          </script>
-          </amp-analytics>
+      
           
       <!-- If browser does not accept AMP then redirect to # -->
       <link rel="canonical" href="#">
@@ -481,7 +464,24 @@
 
     <body>
 
-    
+    <!-- To verify is AMP analytics is in Body or head -->
+
+    <amp-analytics type="gtag" data-credentials="include">
+      <script type="application/json">
+      {
+        "vars" : {
+          "gtag_id": "UA-122164195",
+          "config" : {
+            "GUA-122164195": {
+              "groups": "default",
+              "page_title": "Acuaski",
+              "page_location": "https://quesadillasraclette.github.io/acasuki_webpage/"
+            }
+          }
+        }
+      }
+      </script>
+      </amp-analytics>
     
 
             <!-- SideBar to open / Should include hamburger in CSS -->

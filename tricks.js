@@ -6,15 +6,15 @@
 
 
 //buttons
-var pepButton = $('.btn-pepperonni')
-var mushButton = $('.btn-mushrooms')
-var greenpepButton = $('.btn-green-peppers')
-var sauceButton = $('.btn-sauce ')
-var crustButton = $('.btn-crust')
+var threeButton = $('.360')
+var tantrumButton = $('.btn-tantrum')
+var oneButton = $('.btn-180')
+var grab-Button = $('.btn-grab')
+
 
 
 //complements 
-var pepperonnis = $('.pep')
+var oneeighty = $('.180')
 var mushrooms  = $('.mushroom')
 var greenpeppers = $('.green-pepper')
 var sauce = $('.sauce')
@@ -22,23 +22,10 @@ var crust = $('.crust')
 
 
 //logica 
-pepButton.click(function(){
-    pepperonnis.toggle()
-    pepButton.toggleClass('active')
+oneButton.click(function(){
+    oneeighty.toggle()
+    oneButton.toggleClass('active')
 
-    if(pepPrecio.is(':visible')){
-        pepPrecio.hide()
-    } else {
-        pepPrecio.show()
-    }
-        if (pepButton.hasClass('active')){
-            price = price +1;
-            pepPrecio.toggleClass('visible');
-        } else {
-            price = price -1 ;
-        }
-            total.text(''+price) 
-        
 })
 
 

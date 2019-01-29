@@ -1,0 +1,154 @@
+.style8 { font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal; font-weight:normal; font-size:8pt; text-align:center; }
+a:link { color:#0066CC; border-color:##0066CC; font-weight:bold; text-decoration:none; }
+a:active { color:#0066CC; border-color:##0066CC; font-weight:bold; text-decoration:none; }
+a:visited { color:#0066CC; border-color:##0066CC; font-weight:bold; text-decoration:none; }
+a:hover { color: #0066CC; background:#FFFF00; }
+a:link img { border-color:##0066CC; }
+a:active img { border-color:##0066CC; }
+a:visited img { border-color:##0066CC; }
+a:hover img { color:#EEEEEE; background:#EEEEEE; }
+
+h1 { font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal; font-weight:bold; font-size:14pt; margin:0; padding:0; }
+
+.titre1 { font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal; font-weight:bold; font-size:18pt; text-decoration:none; }
+.titre2 { font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal; font-weight:bold; font-size:12pt; text-decoration:none; }
+.taille10 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size:10pt; }
+.taille10px { font-family: Verdana, Arial, Helvetica, sans-serif; font-size:10px; }
+.taille12 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size:12pt; font-weight:bold; }
+.taille14 { font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal; font-weight:bold; font-size:14pt; }
+.taille9px { font-family: Verdana, Arial, Helvetica, sans-serif; font-size:9px; }
+.contour { border: 1px solid #000; padding: 1px; }
+.bigcontour { font-family: Verdana, Arial, Helvetica, sans-serif; font-weight:bold; font-size:12pt; border: 1px solid #000; padding: 1px 3px; border-radius: 3px; }
+.arrondi { font-family: Verdana, Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; border-width: 1px 0px 1px 1px; border-style:solid; border-color: #000; padding: 1px; border-radius: 3px; background-color:#FFFFCC; vertical-align: -18px; }
+.arrondi2 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; border-width: 1px; border-style:solid; border-color: #000; padding: 1px; border-radius: 3px; background-color:#FFFFCC; }
+.arrondi3 { font-family: Verdana, Arial, Helvetica, sans-serif; font-size:14px; font-weight:bold; border-width: 1px; border-style:solid; border-color: #000; padding: 1px 3px; border-radius: 3px; }
+.red { color:red; }
+.gris { color:#CCCCCC; }
+.surlignejaune { background-color:#FFFF00; }
+.surlignevert { background-color:#00FF00; }
+.categorie { font-family: Verdana, Arial, Helvetica, sans-serif; font-style:normal; font-weight:bold; font-size:14pt; border: 1px solid #000; padding: 3px; margin:0px; background-color:#CCCCCC; border-radius: 3px; }
+.hachure { background-image: url(http://www.animated-gifs.eu/images/hachure.gif); }
+.inline { display:inline-block; }
+
+table { border-color: #CCCCCC; border-width:1px; }
+hr { color: #CCCCCC; background-color: #CCCCCC; height: 1px; border: 0; width: 80%; }
+
+.blink {
+		color:#666666;
+		-webkit-animation: blink 3s linear infinite;
+		-moz-animation: blink 3s linear infinite;
+    -ms-animation: blink 3s linear infinite;
+    -o-animation: blink 3s linear infinite;
+    animation: blink 3s linear infinite;
+}
+
+@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-ms-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-o-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+.blinknoir {
+		font-weight:bold;
+		-webkit-animation: blink 1.5s linear infinite;
+		-moz-animation: blink 1.5s linear infinite;
+    -ms-animation: blink 1.5s linear infinite;
+    -o-animation: blink 1.5s linear infinite;
+    animation: blink 1.5s linear infinite;
+}
+
+@-webkit-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-moz-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-ms-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@-o-keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+@keyframes blink {
+    0% { opacity: 1; }
+    50% { opacity: 1; }
+    50.01% { opacity: 0; }
+    100% { opacity: 0; }
+}
+
+/* STYLE LIGHTBOX - Voir css commenté dans répertoire lightbox3 */
+#lightbox{	position: absolute;	left: 0; width: 100%; z-index: 100; text-align: center; line-height: 0;}
+#lightbox img{ width: auto; height: 16px;}
+#lightbox a img{ border: none; }
+#outerImageContainer{ position: relative; background-color: #fff; width: 250px; height: 250px; margin: 0 auto; }
+#imageContainer{ padding: 10px; }
+#loading{ position: absolute; top: 40%; left: 0%; height: 25%; width: 100%; text-align: center; line-height: 0; }
+#hoverNav{ position: absolute; top: 0; left: 0; height: 100%; width: 100%; z-index: 10; }
+#imageContainer>#hoverNav{ left: 0;}
+#hoverNav a{ outline: none;}
+#hoverNav2{ float:left; padding-bottom: 1px; position:relative; width:140px; height:16px;}
+#imageContainer>#hoverNav2{ left: 0;}
+#hoverNav2 a{ outline: none;}
+#prevLink, #nextLink{ width: 49%; height: 100%; background-image: url(data:image/gif;base64,AAAA); display: block; }
+#prevLink { left: 0; float: left;}
+#nextLink { right: 0; float: right;}
+#prevLink:hover, #prevLink:visited:hover { background: url(http://www.animated-gifs.eu/lightbox3/prevlabel.gif) left 100% no-repeat; }
+#nextLink:hover, #nextLink:visited:hover { background: url(http://www.animated-gifs.eu/lightbox3/nextlabel.gif) right 100% no-repeat; }
+#prevLink2, #nextLink2{ width: 63px; height: 16px; background-image: url(data:image/gif;base64,AAAA);display: inline-block; }
+#prevLink2 { float:left; background: url(http://www.animated-gifs.eu/lightbox3/prevlabel.gif) left 0% no-repeat; }
+#nextLink2 { float:right; background: url(http://www.animated-gifs.eu/lightbox3/nextlabel.gif) right 0% no-repeat; }
+#prevLink2:hover, #prevLink2:visited:hover { background: url(http://www.animated-gifs.eu/lightbox3/prevlabel.gif) left 0% no-repeat; }
+#nextLink2:hover, #nextLink2:visited:hover { background: url(http://www.animated-gifs.eu/lightbox3/nextlabel.gif) right 0% no-repeat; }
+#imageDataContainer{ font: 10px Verdana, Helvetica, sans-serif; background-color: #fff; margin: 0 auto; line-height: 1.4em; overflow: hidden; width: 100%	; }
+#imageData{	padding:0 10px; color: #666; }
+#imageData #imageDetails{ position:relative; width: 100%;  text-align: left; }	
+#imageData #caption{ font-weight: bold; }
+#imageData #numberDisplay{ display: block; clear: left; padding: 0.5em 0px; width: 100%; }
+#imageData #bottomNav{ height:16px; float:right; margin-left:5px; outline: none;}
+#imageData #bottomNavClose { display: inline-block; line-height:0.8em; }
+#overlay{ position: absolute; top: 0; left: 0; z-index: 90; width: 100%; height: 100%; background-color: #000; }

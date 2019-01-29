@@ -203,56 +203,50 @@ p.description {
   left: 0;
 }
 
-.btn-360 {
-  background: #e8103b;
-  box-shadow: 0 6px #890923;
+.btn-happy {
+  background: #85c8ff;
+  box-shadow: 0 6px #5b88ad;
   color: #fff;
 }
 
-.btn-360:hover {
-  background: #c80e33;
-  box-shadow: 0 5px #69071b;
+.btn-happy:hover {
+  background: #5b88ad;
+  box-shadow: 0 5px ##85c8ff;
   color: #fff;
 }
 
-.btn-360.active {
+.btn-happy.active {
   top: 2px;
-  box-shadow: 0 2px #890923;
+  box-shadow: 0 2px #85c8ff;
 }
 
-.btn-360.active:hover {
-  box-shadow: 0 2px #69071b;
+.btn-happy.active:hover {
+  box-shadow: 0 2px #85c8ff;
 }
 
-.btn-360:active,
-.btn-360.active:active {
+.btn-happy:active,
+.btn-happy.active:active {
   top: 5px;
   box-shadow: none;
 }
 
-. {
-  background: #b49989;
-  box-shadow: 0 6px #644d40;
+.btn-cat:hover {
+  background: #689cd7;
+  box-shadow: 0 5px #689cd7;
   color: #fff;
 }
 
-.btn-tantrum:hover {
-  background: #a78774;
-  box-shadow: 0 5px #503d33;
-  color: #fff;
-}
-
-.btn-tantrum.active {
+.btn-cat.active {
   top: 2px;
   box-shadow: 0 2px #644d40;
 }
 
-.btn-tantrum.active:hover {
+.btn-cat.active:hover {
   box-shadow: 0 2px #503d33;
 }
 
-.btn-tantrum:active,
-.btn-tantrum.active:active {
+.btn-cat:active,
+.btn-cat.active:active {
   top: 5px;
   box-shadow: none;
 }
@@ -303,10 +297,4 @@ p.description {
 
 .btn-180.active:hover {
   box-shadow: 0 2px #776800;
-}
-
-.btn-180:active,
-.btn-180.active:active {
-  top: 5px;
-  box-shadow: none;
 }

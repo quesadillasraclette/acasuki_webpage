@@ -2,6 +2,7 @@
   <html ⚡>
     <head>
       <meta charset="utf-8">
+      <meta name="Description" content="My acuaski page.">
       <title>Acuaski</title>
 
       <!-- Script for AMP Component -->
@@ -24,7 +25,7 @@
       
           
       <!-- If browser does not accept AMP then redirect to # -->
-      <link rel="canonical" href="#">
+      <link rel="canonical" href="https://quesadillasraclette.github.io/acasuki_webpage/">
       <meta name="viewport" content="width=device-width,minimum-scale=1,initial-scale=1">
       
       <!-- Not 100% sure why i needed this style but it was mandatory to have the AMP verified  -->
@@ -110,7 +111,7 @@
            background-color:var(--color-primary);
            background-position:center;
            background-repeat:no-repeat;
-           background-image:-webkit-image-set(url(/img/ic_search_white_1x_web_24dp.png) 1x,url(/img/ic_search_white_2x_web_24dp.png) 2x);
+           background-image:-webkit-image-set(url(/) 1x,url(/) 2x);
            border:0;
            height:var(--space-4);
            width:36px;
@@ -466,17 +467,16 @@
 
     <!-- To verify is AMP analytics is in Body or head -->
 
-    <amp-analytics type="gtag" data-credentials="include">
+    <amp-analytics type="googleanalytics" id="analytics1">
       <script type="application/json">
       {
-        "vars" : {
-          "gtag_id": "UA-122164195",
-          "config" : {
-            "GUA-122164195": {
-              "groups": "default",
-              "page_title": "Acuaski",
-              "page_location": "https://quesadillasraclette.github.io/acasuki_webpage/"
-            }
+        "vars": {
+          "account": "UA-122164195"  // 
+        },
+        "triggers": {
+          "trackPageview": {  // Trigger names can be any string. trackPageview is not a required name.
+            "on": "visible",
+            "request": "pageview"
           }
         }
       }
@@ -526,8 +526,9 @@
           
           <amp-fit-text class="caption" width="2000" height="50" layout="responsive"
                                                                  max-font-size="36">
-                                                       
-             <div class="btn_book"> Book your session </div>
+             <div>                                         
+             <div class="btn_book" onclick="alert('Super! It is available!!!')"> Book your session </div>   
+              </div> 
                         <form method="post"
                         action-xhr="https://quesadillasraclette.github.io/acasuki_webpage/">
                             
@@ -586,7 +587,7 @@
                       and make sure you feel safe, have fun, and  the experience             
                     </p>
                     <form class="sample-form" method="post"
-                          action-xhr="/components/amp-form/submit-form-input-text-xhr"
+                          action-xhr="//components/amp-form/submit-form-input-text-xhr"
                           target="_top">
                       <div class="container">
                         <form action="/action_page.php" target="_top"></form>
@@ -682,4 +683,7 @@
            
 
     </body>
+
+   
+   
   </html>

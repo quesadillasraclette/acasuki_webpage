@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="table/table.css">
+    <title>Leaderboard</title>
+</head>
+<body>
+
+<h1>Leaderboard</h1>
+<div id="contacts">
+  <table>
+    <thead>
+      <tr>
+        <th class="sort" data-sort="name">Name</th>
+        <th class="sort" data-sort="trick">Trick</th>
+      </tr>
+    </thead>
+    <tbody class="list">
+      <tr>
+        <td class="id" style="display:none;">1</td>
+        <td class="name">Juanita</td>
+        <td class="trick">360</td>
+        <td class="edit"><button class="edit-item-btn">Edit</button></td>
+        <td class="remove"><button class="remove-item-btn">Remove</button></td>
+      </tr>
+      <tr>
+        <td class="id" style="display:none;">2</td>
+        <td class="name">Mike</td>
+        <td class="trick">Grab</td>
+        <td class="edit"><button class="edit-item-btn">Edit</button></td>
+        <td class="remove"><button class="remove-item-btn">Remove</button></td>
+      </tr>
+      <tr>
+        <td class="id" style="display:none;">3</td>
+        <td class="name">Diego</td>
+        <td class="trick">Tamtrum</td>
+        <td class="edit"><button class="edit-item-btn">Edit</button></td>
+        <td class="remove"><button class="remove-item-btn">Remove</button></td>
+      </tr>
+      <tr>
+        <td class="id" style="display:none;">4</td>
+        <td class="name">Monica</td>
+        <td class="trick">Transfer</td>
+        <td class="edit"><button class="edit-item-btn">Edit</button></td>
+        <td class="remove"><button class="remove-item-btn">Remove</button></td>
+      </tr>
+    </tbody>
+  </table>
+  <table>
+    <td class="name">
+      <input type="hidden" id="id-field" />
+      <input type="text" id="name-field" placeholder="Name" />
+    </td>
+    <td class="trick">
+      <input type="text" id="trick-field" placeholder="trick" />
+    </td>
+    <td class="add">
+      <button id="add-btn">Add</button>
+      <button id="edit-btn">Edit</button>
+    </td>
+  </table>
+  
+ 
+</div>
+
+
+
+
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/list.js/1.5.0/list.min.js"></script>
+<script src="table.js"></script>
+
+</body>
+</html></html>
